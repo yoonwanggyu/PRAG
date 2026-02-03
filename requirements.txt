@@ -1,8 +1,21 @@
-torch==1.13.1
-transformers==4.44.2
+# torch==1.13.1
+# transformers==4.44.2
+# elasticsearch==8.15.0
+# peft==0.13.2
+# pandas==1.5.3
+# numpy==1.26.4
+# faiss-cpu==1.8.0
+# termcolor
+
+# ❗ torch는 이미지에 포함되어 있으므로 설치하지 않음
+
+transformers==4.46.3
+peft==0.14.0
+
 elasticsearch==8.15.0
-peft==0.13.2
-pandas==1.5.3
+
+pandas==2.2.2
 numpy==1.26.4
-faiss-cpu==1.8.0
+
+faiss-gpu==1.8.0
 termcolor

@@ -1,1 +1,1 @@
-ROOT_DIR = "path_to_PRAG"
+ROOT_DIR = "/Users/yoon/Lab/PRAG"
