@@ -11,6 +11,8 @@ from root_dir_path import ROOT_DIR
 from utils import get_model, evaluate, predict, load_data, read_complete
 
 def main(args):
+    target_layers_str = "layers_10-15"
+
     data_list = load_data(args.dataset, args.data_type, args.augment_model)
     model, tokenizer, generation_config = get_model(
         args.model_name,
@@ -24,7 +26,7 @@ def main(args):
         ROOT_DIR, 
         "offline", 
         args.model_name, 
-        f"rank={args.lora_rank}_alpha={args.lora_alpha}",
+        f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
         args.dataset,
         f"lr={args.learning_rate}_epoch={args.num_train_epochs}_{cot_name}",
         f"aug_model={args.augment_model}",
@@ -33,11 +35,12 @@ def main(args):
         ROOT_DIR, 
         "output",
         args.model_name, 
-        f"rank={args.lora_rank}_alpha={args.lora_alpha}",
+        f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
         args.dataset,
         f"lr={args.learning_rate}_epoch={args.num_train_epochs}_{cot_name}",
         f"aug_model={args.augment_model}",
         args.inference_method, 
+        args.adapter_merge_type
     )
     for filename, fulldata in data_list:
         filename = filename.split(".")[0]
@@ -91,7 +94,7 @@ def main(args):
                     adapters = [str(i) for i in range(len(passages))], 
                     weights = [1] * len(passages),
                     adapter_name = "merge", 
-                    combination_type = "cat",
+                    combination_type = args.adapter_merge_type  # args로 사용자가 입력할 수 있게 변경
                 )
                 model.set_adapter("merge")
                 ret.append(get_pred(model, psgs=None if args.inference_method == "prag" else passages))
@@ -130,6 +133,7 @@ if __name__ == "__main__":
     # LoRA
     parser.add_argument("--lora_rank", type=int)
     parser.add_argument("--lora_alpha", type=int)
+    parser.add_argument("--adapter_merge_type",type=str,default="cat",choices=["cat", "linear", "svd"])
     args = parser.parse_args()
     assert args.lora_rank and args.lora_alpha, "No Config for LoRA"
     if args.augment_model is None:

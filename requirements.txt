@@ -7,7 +7,7 @@
 # faiss-cpu==1.8.0
 # termcolor
 
-# ❗ torch는 이미지에 포함되어 있으므로 설치하지 않음
+# ❗ torch는 포함되어 있으므로 설치하지 않음
 
 transformers==4.46.3
 peft==0.14.0
@@ -17,5 +17,5 @@ elasticsearch==8.15.0
 pandas==2.2.2
 numpy==1.26.4
 
-faiss-gpu==1.8.0
+# faiss-gpu==1.8.0
 termcolor
