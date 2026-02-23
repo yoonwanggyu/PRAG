@@ -16,7 +16,7 @@ from utils import get_model, load_data
 import numpy as np
 import random
 
-seed = 42 
+seed = 111
 torch.manual_seed(seed)
 np.random.seed(seed)
 random.seed(seed)
@@ -217,13 +217,17 @@ def main(args):
     # 이 경로에는:
     # - 랜덤 초기화된 LoRA weight가 저장됨
     # - 이후 모든 passage 학습의 출발점이 됨
-    target_layers_str = "layers_10-15"
+
+    # 특정 layer 학습 시 활성화
+    # target_layers_str = "layers_10-15"
 
     init_adapter_path = os.path.join(
         ROOT_DIR, 
         "offline", 
         args.model_name, 
-        f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
+        # f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}", # 특정 layer 학습 시 활성화
+        f"rank={args.lora_rank}_alpha={args.lora_alpha}_seed={seed}"
+        # f"rank={args.lora_rank}_alpha={args.lora_alpha}",
         "base_weight",
     )
     # ======================================
@@ -237,8 +241,10 @@ def main(args):
             task_type=TaskType.CAUSAL_LM,
             # LLaMA의 FFN(MLP) 부분에만 LoRA 적용
             target_modules=['down_proj', 'gate_proj', 'up_proj'],
+
             # 후반 layer에서만 학습 진행
-            layers_to_transform=[10,11,12, 13, 14, 15],
+            # layers_to_transform=[10,11,12, 13, 14, 15],
+
             inference_mode=False,
             r=args.lora_rank,
             lora_alpha=args.lora_alpha,
@@ -279,7 +285,9 @@ def main(args):
             ROOT_DIR, 
             "offline", 
             args.model_name, 
-            f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
+            # f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
+            f"rank={args.lora_rank}_alpha={args.lora_alpha}_seed={seed}",
+            # f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
             args.dataset,
             f"lr={args.learning_rate}_epoch={args.num_train_epochs}_{cot_name}",
             f"aug_model={args.augment_model}",

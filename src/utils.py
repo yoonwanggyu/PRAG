@@ -135,11 +135,14 @@ def get_model(model_name, max_new_tokens=20):
     model = AutoModelForCausalLM.from_pretrained(
         model_path, 
         # torch_dtype=torch.float32,
+
+        # OOM 발생 시 활성화
         torch_dtype=torch.bfloat16,
+        
         low_cpu_mem_usage=True,
         device_map=None, 
         trust_remote_code=True,
-        local_files_only=True
+        local_files_only = True
     ).to("cuda")
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
     generation_config = dict(

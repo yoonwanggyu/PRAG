@@ -10,8 +10,12 @@ import prompt_template
 from root_dir_path import ROOT_DIR
 from utils import get_model, evaluate, predict, load_data, read_complete
 
+seed = 111
+
 def main(args):
-    target_layers_str = "layers_10-15"
+    
+    # 특정 layer 학습 시 활성화
+    # target_layers_str = "layers_10-15"
 
     data_list = load_data(args.dataset, args.data_type, args.augment_model)
     model, tokenizer, generation_config = get_model(
@@ -26,7 +30,13 @@ def main(args):
         ROOT_DIR, 
         "offline", 
         args.model_name, 
-        f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
+        
+        # 특정 layer 학습 시 활성화
+        # f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
+
+        f"rank={args.lora_rank}_alpha={args.lora_alpha}_seed={seed}",
+
+        # f"rank={args.lora_rank}_alpha={args.lora_alpha}",
         args.dataset,
         f"lr={args.learning_rate}_epoch={args.num_train_epochs}_{cot_name}",
         f"aug_model={args.augment_model}",
@@ -35,7 +45,12 @@ def main(args):
         ROOT_DIR, 
         "output",
         args.model_name, 
-        f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
+
+        # 특정 layer 학습 시 활성화
+        # f"rank={args.lora_rank}_alpha={args.lora_alpha}_{target_layers_str}",
+        f"rank={args.lora_rank}_alpha={args.lora_alpha}_seed={seed}",
+
+        # f"rank={args.lora_rank}_alpha={args.lora_alpha}",
         args.dataset,
         f"lr={args.learning_rate}_epoch={args.num_train_epochs}_{cot_name}",
         f"aug_model={args.augment_model}",
