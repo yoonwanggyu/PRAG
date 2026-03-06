@@ -144,6 +144,7 @@ def get_model(model_name, max_new_tokens=20):
         trust_remote_code=True,
         local_files_only = True
     ).to("cuda")
+    print("Model device:", model.device)
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
     generation_config = dict(
         num_beams=1, 
@@ -167,6 +168,7 @@ def model_generate(prompt, model, tokenizer, generation_config):
     )
     input_len = len(input_ids)
     input_ids = torch.tensor(input_ids).unsqueeze(0).to(model.device)
+    # print("input_ids device:", input_ids.device)
     output = model.generate(
         input_ids, 
         attention_mask = torch.ones(input_ids.shape).to(model.device),

@@ -16,7 +16,7 @@ from utils import get_model, load_data
 import numpy as np
 import random
 
-seed = 111
+seed = 55
 torch.manual_seed(seed)
 np.random.seed(seed)
 random.seed(seed)

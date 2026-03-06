@@ -10,7 +10,7 @@ import prompt_template
 from root_dir_path import ROOT_DIR
 from utils import get_model, evaluate, predict, load_data, read_complete
 
-seed = 111
+seed = 55
 
 def main(args):
     
