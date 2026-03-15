@@ -1,0 +1,46 @@
+[
+    {
+        "pid": 0,
+        "original_passage": "El extraño viaje El extraño viaje() is a 1964 Spanish black drama film directed by Fernando Fernán Gómez. Famous film director Jess Franco acts as the brother of the protagonist. The film was a huge flop on its limited release. It was voted seventh best Spanish film by professionals and critics in 1996 Spanish cinema centenary. In a large house in the middle of a little Spanish town live Venancio and Paquita, the retarded brother and sister of Ignacia, who bullies them continuously. Suspecting that she has a visitor after dark, they start snooping and one night she turns on. used to slip into Ignacia's house after work. When he found her dead, he helped Venancio and Paquita dispose of the body. Then he took them away to the sea, where he gave them knockout drops so that he could escape with Ignacia's money. Unfortunately, his dose was too powerful. El extraño viaje El extraño viaje() is a 1964 Spanish black drama film directed by Fernando Fernán Gómez. Famous film director Jess Franco acts as the brother of the protagonist. The film was a huge flop on its limited release. It was voted seventh best Spanish film by professionals and. El Viaje de Rose El Viaje de Rose (it could be translated as “The Rose’s Journey”) are a Spanish pop-rock band from Badajoz, Extremadura. The band is led by Ana Broncano, the singer. The name El Viaje de Rose is due to the fact that Ana saw a poster of the film Titanic when they were thinking about the name of the band The band was created in 2004 and Broncano's lyrics have frequent allusions to love and sotial problems. Well-known songs by El Viaje de Rose include \"Deseo\", \"No se puede matar al amor\", \"Tras la vida\", \"Caos\", \"Ayúdame\"",
+        "llama3.2-1b-instruct_rewrite": "In the depths of rural Spain, a mysterious and isolated house stood, its walls bearing the scars of a troubled past. It was here that Ignacia, a young girl with a kind heart, resided with her eccentric sister Venancio. The siblings lived in a world of their own, shielded from the outside world by the darkness that surrounded them. But on one fateful night, a visitor arrived, and Ignacia's life would never be the same. She was a thief, and Venancio and Paquita, her retarded brother and sister, were left to deal with the consequences. As the night wore on, the siblings' fear gave way to desperation, and they turned to desperate measures to survive. They made a pact with a mysterious figure, who offered them a chance at freedom, but at a terrible cost. The siblings were drawn into a world of violence and deception, and their lives would never be the same again. In the midst of this chaos, a mysterious figure watched from the shadows, a figure who had a hidden agenda. The truth about Ignacia's fate remained a mystery, lost in the darkness that surrounded her.\n\nEl extraño viaje() is a 1964 Spanish black drama film directed by Fernando Fernán Gómez. Famous film director Jess Franco acts as the brother of the protagonist. The film was a huge flop on its limited release. It was voted seventh best Spanish film by professionals and critics in 1996 Spanish cinema centenary. In a large house in the middle of a little Spanish town live Venancio and Paquita, the retarded brother and sister of Ignacia, who bullies them continuously. Suspecting that she has a visitor after dark, they start snooping and one night she turns on. used to slip into Ignacia's house after work. When he found her dead, he helped Venancio and Paquita dispose of the body. Then he took them away to the sea, where he gave them knockout drops so that he could escape with Ignacia's money. Unfortunately, his dose was too powerful. El Viaje de Rose El Viaje de Rose (it could be translated as “The Rose’s Journey”) are a Spanish pop-rock band from Badajoz, Extremadura. The band is led by Ana Broncano, the singer. The name El Viaje de Rose is due to the fact that Ana saw a poster of the film Titanic when they were thinking about the name of the band The band was created in 2004",
+        "llama3.2-1b-instruct_qa": [
+            {
+                "question": "What is the name of the town where the film is set?",
+                "answer": "a little Spanish town",
+                "full_answer": "The town where the film is set is a little Spanish town."
+            },
+            {
+                "question": "Who is the protagonist in the film El extraño viaje?",
+                "answer": "Ignacia",
+                "full_answer": "The protagonist in the film El extraño viaje is Ignacia."
+            },
+            {
+                "question": "What is the name of the Spanish pop-rock band El Viaje de Rose?",
+                "answer": "El Viaje de Rose",
+                "full_answer": "The name El Viaje de Rose is due to the fact that Ana Broncano, the singer, saw a poster of the film Titanic when they were thinking about the name of the band."
+            }
+        ]
+    },
+    {
+        "pid": 1,
+        "original_passage": "George Rankin Major General George James Rankin, (1 May 1887 – 28 December 1957) was an Australian soldier and politician. He served in both the House of Representatives and the Senate, representing the Country Party of Australia. Rankin was born at Bamawm, Victoria, the tenth child of Irish farmer James Rankin and Sarah, née Gallagher. He attended the local state school and became a farmer. In 1907, he joined the Militia, and was commissioned in the 9th Light Horse Regiment in 1909. He married Annie Isabella Oliver at Rochester, Victoria on 7 July 1912. In 1914, he was appointed a. was buried, and was survived by his wife. George Rankin Major General George James Rankin, (1 May 1887 – 28 December 1957) was an Australian soldier and politician. He served in both the House of Representatives and the Senate, representing the Country Party of Australia. Rankin was born at Bamawm, Victoria, the tenth child of Irish farmer James Rankin and Sarah, née Gallagher. He attended the local state school and became a farmer. In 1907, he joined the Militia, and was commissioned in the 9th Light Horse Regiment in 1909. He married Annie Isabella Oliver at Rochester, Victoria on 7. George Claus Rankin Sir George Claus Rankin PC (12 August 1877 – 8 April 1946) was a British judge in India. Rankin was born in Lamington, Lanarkshire, the son of Rev. Robert Rankin. He was educated at the University of Edinburgh and Trinity College, Cambridge. He as admitted at Lincoln's Inn and called to the bar in 1904. He served in the First World War with the Royal Garrison Artillery. He went to India in 1918 and served first as a puisne judge of the High Court of Calcutta, and then as Chief Justice, from 1926 to 1934. While in",
+        "llama3.2-1b-instruct_rewrite": "Sir George Claus Rankin was a distinguished figure in the history of British India. Born in Lamington, Lanarkshire, on August 12, 1877, he was the eldest son of Rev. Robert Rankin, a prominent clergyman. Rankin's early life was marked by a strong sense of duty, as he was educated at the University of Edinburgh and Trinity College, Cambridge. He was called to the bar in 1904 and quickly rose through the ranks, serving in the First World War with the Royal Garrison Artillery.\n\nAfter the war, Rankin settled in India, where he established himself as a respected judge. In 1918, he was appointed to the High Court of Calcutta, a position he held until 1926. During this time, he served as a puisne judge and later as Chief Justice, a position he held until 1934. Rankin's impressive career was cut short when he died in office on April 8, 1946.\n\nWhile serving as a judge in India, Rankin was a strong advocate for the rights of the local population. He was a key figure in the country's judicial system and played a crucial role in shaping its development. Despite his untimely death, Rankin's legacy continues to be felt in India, where he is remembered as a distinguished and respected judge.",
+        "llama3.2-1b-instruct_qa": [
+            {
+                "question": "What was George Rankin's occupation?",
+                "answer": "He was a farmer.",
+                "full_answer": "He attended the local state school and became a farmer."
+            },
+            {
+                "question": "Where was George Rankin born?",
+                "answer": "Bamawm, Victoria",
+                "full_answer": "He was born at Bamawm, Victoria, the tenth child of Irish farmer James Rankin and Sarah, née Gallagher."
+            },
+            {
+                "question": "What was the year George Rankin was appointed Chief Justice?",
+                "answer": "1926",
+                "full_answer": "He served in the First World War with the Royal Garrison Artillery and then as Chief Justice, from 1926 to 1934."
+            }
+        ]
+    }
+]

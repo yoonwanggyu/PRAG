@@ -1,0 +1,65 @@
+[GridSearchCV 교차 검증 결과 - 모든 경우의 수]
+-----------------------------------------------------------------
+     K   Weights     Metric  Mean_Validation_Accuracy  Rank
+0   13   uniform     cosine                   0.55625     1
+1   17   uniform     cosine                   0.54375     2
+2    9   uniform     cosine                   0.53125     3
+3   11   uniform     cosine                   0.52500     4
+4    7   uniform     cosine                   0.51875     5
+5   17   uniform  euclidean                   0.50625     6
+6   15   uniform     cosine                   0.50000     7
+7   13   uniform  euclidean                   0.49375     8
+8   15   uniform  euclidean                   0.49375     8
+9   11   uniform  euclidean                   0.49375     8
+10   5   uniform     cosine                   0.47500    11
+11   9   uniform  euclidean                   0.46875    12
+12   7   uniform  euclidean                   0.44375    13
+13   5   uniform  euclidean                   0.42500    14
+14   3   uniform     cosine                   0.40625    15
+15   3   uniform  euclidean                   0.40000    16
+16  17  distance  euclidean                   0.33125    17
+17  15  distance  euclidean                   0.29375    18
+18   9  distance     cosine                   0.27500    19
+19  11  distance  euclidean                   0.26875    20
+20  13  distance  euclidean                   0.26875    20
+21  17  distance     cosine                   0.26250    22
+22   3  distance     cosine                   0.26250    22
+23  13  distance     cosine                   0.25625    24
+24   1   uniform     cosine                   0.25625    24
+25   1  distance     cosine                   0.25625    24
+26   9  distance  euclidean                   0.25000    27
+27   7  distance     cosine                   0.25000    27
+28  15  distance     cosine                   0.25000    27
+29  11  distance     cosine                   0.25000    27
+30   5  distance     cosine                   0.25000    27
+31   3  distance  euclidean                   0.24375    32
+32   7  distance  euclidean                   0.22500    33
+33   5  distance  euclidean                   0.21875    34
+34   1  distance  euclidean                   0.20625    35
+35   1   uniform  euclidean                   0.20625    35
+-----------------------------------------------------------------
+
+[최적의 파라미터 조합]
+--------------------------------------------------
+최적의 파라미터: {'knn__metric': 'cosine', 'knn__n_neighbors': 13, 'knn__weights': 'uniform'}
+최고 Validation 평균 정확도: 0.5563
+--------------------------------------------------
+
+[최종 Test 데이터 평가 결과]
+--------------------------------------------------
+y_test            : [0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+y_predict         : [0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1]
+Test Accuracy     : 0.4750
+Test F1           : 0.5532
+--------------------------------------------------
+
+[상세 분류 리포트 (Classification Report)]
+              precision    recall  f1-score   support
+
+           0       0.46      0.30      0.36        20
+           1       0.48      0.65      0.55        20
+
+    accuracy                           0.47        40
+   macro avg       0.47      0.47      0.46        40
+weighted avg       0.47      0.47      0.46        40
+
