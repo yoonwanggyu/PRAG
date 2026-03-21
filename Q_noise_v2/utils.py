@@ -32,7 +32,7 @@ def get_model(model_name, max_new_tokens=20):
         device_map=None, 
         trust_remote_code=True,
         local_files_only = True
-    ).to("cuda")
+    )
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
     generation_config = dict(
         num_beams=1, 

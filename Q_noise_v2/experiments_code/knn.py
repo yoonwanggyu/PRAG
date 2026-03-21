@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, classification_report, f1_score
 import wandb
+from tqdm import tqdm
 
 wandb.init(project="KNN", name="KNN_GridSearch")
 
@@ -52,7 +53,7 @@ print(f"Test 데이터 개수: {len(X_test)}")
 # metric (기본값 metric='minkowski', p=2로 되어 있어 사실상 기본값은 유클리디안 거리로 작동): 벡터 간의 거리를 어떻게 잴 것인가를 결정
 
 param_grid = {
-    'n_neighbors': [1, 3, 5, 7, 9, 11, 13, 15,17],
+    'n_neighbors': [1, 3, 5, 7, 9, 11, 13, 15, 17],
     'weights': ['uniform', 'distance'],
     'metric': ['cosine', 'euclidean']
 }
@@ -61,47 +62,53 @@ grid_search = GridSearchCV(
     estimator=KNeighborsClassifier(),
     param_grid=param_grid,
     cv=5,   # 학습 데이터를 다시 K개(보통 5개)의 폴드(Fold)로 나누어 학습과 검증을 반복
-    scoring='accuracy',
+    # scoring='accuracy',
+    scoring='f1_macro',
     n_jobs=-1
 )
 
+print("학습 시작----------------------------")
 grid_search.fit(X_train,y_train)
-
+print("학습 끝-----------------------------")
 # 4) 결과 정리-----
 results_df = pd.DataFrame(grid_search.cv_results_)
 
 results_df = results_df[['param_n_neighbors', 'param_weights', 'param_metric', 'mean_test_score', 'rank_test_score']]
-results_df.columns = ['K', 'Weights', 'Metric', 'Mean_Validation_Accuracy', 'Rank']
+results_df.columns = ['K', 'Weights', 'Metric', 'Mean_Validation_F1_Macro', 'Rank']
 
 results_df_sorted = results_df.sort_values(by='Rank').reset_index(drop=True)
 
     # DataFrame을 WandB Table로 변환하여 기록 (웹에서 인터랙티브 그래프 생성 가능)
-wandb.log({"GridSearch_Results_Table": wandb.Table(dataframe=results_df_sorted)})
+wandb.log({"PCA_GridSearch_Results_Table": wandb.Table(dataframe=results_df_sorted)})
 
 # 5) 최적의 파라미터로 Test 데이터 최종 평가
 best_knn = grid_search.best_estimator_
 test_pred = best_knn.predict(X_test)
 
 test_acc = accuracy_score(y_test, test_pred)
-test_f1 = f1_score(y_test, test_pred)
+test_f1_macro = f1_score(y_test, test_pred, average='macro')
 
 class_report = classification_report(y_test, test_pred)
 
     # 핵심 지표(Metrics)를 WandB에 기록
 wandb.log({
+    "Best_Mean_Validation_F1_Macro": grid_search.best_score_,
     "Test_Accuracy": test_acc,
-    "Test_F1_Score": test_f1,
-    "Best_Validation_Accuracy": grid_search.best_score_
-})
+    "Test_F1_macro_Score": test_f1_macro,   # 두 클래스의 F1 점수를 각각 구한 뒤 평균을 내는 방식(지금 계속 1로만 찍어서)
+})                                          # 기본 f1 score은 1 클래스에 대해서만 결과 반환
 
-wandb.log({
-    "Confusion_Matrix": wandb.plot.confusion_matrix(
-        probs=None,
-        y_true=y_test,
-        preds=test_pred.tolist(),
-        class_names=["doc0_LoRA", "doc1_LoRA"]
-    )
-})
+    # 예측값 / 실제값
+y_test_str = str(y_test)
+y_pred_str = str(test_pred.tolist())
+
+html_content = f"""
+<pre>
+y_test    : {y_test_str}
+y_predict : {y_pred_str}
+</pre>
+"""
+
+wandb.log({"Raw_Predictions": wandb.Html(html_content)})
 
 wandb.finish()
 

@@ -122,8 +122,10 @@ def train_lora_for_passage(aug_data, model_name, model, tokenizer, init_adapter_
     model.train()
     for epoch in range(epochs):
         step_losses = []
+
+        progress_bar = tqdm(train_dataloader, desc=f"Epoch {epoch+1}/{epochs}")
         
-        for step, batch in enumerate(train_dataloader):
+        for step, batch in enumerate(progress_bar):
             optimizer.zero_grad()
             outputs = model(**batch)
             loss = outputs.loss

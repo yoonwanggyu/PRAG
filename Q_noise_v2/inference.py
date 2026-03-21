@@ -64,6 +64,7 @@ def extract_hidden_representations(model_name, lora_paths, questions, output_fol
     
         # doc별 파일 저장
         output_path = os.path.join(output_folder, f"doc{i}_hidden_representation.json")
+        # output_path = os.path.join(output_folder, f"base_weight_hidden_representation.json")
 
         print("### 4. 결과 저장 ###")
         with open(output_path, "w", encoding="utf-8") as f:
@@ -79,6 +80,7 @@ if __name__ == "__main__":
     
     # 이전 단계에서 저장된 passage 0의 LoRA 경로
     LORA_PATHs = ["trained_LORA/passage_0_lora", "trained_LORA/passage_1_lora"]
+    # LORA_PATHs = ["trained_LORA/base_weight"]
     
     # 실행
     extract_hidden_representations(

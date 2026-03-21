@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, classification_report, f1_score
 from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, RobustScaler
 from sklearn.pipeline import Pipeline
 import wandb
 
@@ -53,13 +53,14 @@ print(f"Test 데이터 개수: {len(X_test)}")
 
 # 3) 파이프라인 
 pipeline = Pipeline([
-    ('scaler', StandardScaler()),                    # 1단계: 각 차원의 크기(Scale)를 균일하게 맞춤
-    ('pca', PCA(n_components=50, random_state=42)),  # 2단계: 50차원으로 핵심 정보만 압축
+    ('scaler', RobustScaler()),                      # 1단계: 각 차원의 크기(Scale)를 균일하게 맞춤
+    ('pca', PCA(n_components=55, random_state=42)),  # 2단계: 55차원으로 핵심 정보만 압축
     ('knn', KNeighborsClassifier())                  # 3단계: KNN 분류기
 ])
 
 # 4) knn 학습
 param_grid = {
+    # 'pca__n_components': [10, 30, 50, 80, 120],
     'knn__n_neighbors': [1, 3, 5, 7, 9, 11, 13, 15, 17],
     'knn__weights': ['uniform', 'distance'],
     'knn__metric': ['cosine', 'euclidean']
@@ -69,7 +70,8 @@ grid_search = GridSearchCV(
     estimator=pipeline,
     param_grid=param_grid,
     cv=5,   
-    scoring='accuracy',
+    # scoring='accuracy',
+    scoring='f1_macro',
     n_jobs=-1
 )
 
@@ -80,35 +82,38 @@ grid_search.fit(X_train,y_train)
 results_df = pd.DataFrame(grid_search.cv_results_)
 
 results_df = results_df[['param_knn__n_neighbors', 'param_knn__weights', 'param_knn__metric', 'mean_test_score', 'rank_test_score']]
-results_df.columns = ['K', 'Weights', 'Metric', 'Mean_Validation_Accuracy', 'Rank']
+results_df.columns = ['K', 'Weights', 'Metric', 'Mean_Validation_F1_Macro', 'Rank']
 
 results_df_sorted = results_df.sort_values(by='Rank').reset_index(drop=True)
 
-wandb.log({"GridSearch_Results_Table": wandb.Table(dataframe=results_df_sorted)})
+wandb.log({"PCA_GridSearch_Results_Table": wandb.Table(dataframe=results_df_sorted)})
 
 # 5) 최적의 파라미터로 Test 데이터 최종 평가
 best_knn = grid_search.best_estimator_
 test_pred = best_knn.predict(X_test)
 
 test_acc = accuracy_score(y_test, test_pred)
-test_f1 = f1_score(y_test, test_pred)
+test_f1_macro = f1_score(y_test, test_pred, average='macro')
 
 class_report = classification_report(y_test, test_pred)
 
 wandb.log({
+    "Best_Mean_Validation_F1_Macro": grid_search.best_score_,
     "Test_Accuracy": test_acc,
-    "Test_F1_Score": test_f1,
-    "Best_Validation_Accuracy": grid_search.best_score_
-})
+    "Test_F1_macro_Score": test_f1_macro,  
+})         
 
-wandb.log({
-    "Confusion_Matrix": wandb.plot.confusion_matrix(
-        probs=None,
-        y_true=y_test,
-        preds=test_pred.tolist(),
-        class_names=["doc0_LoRA", "doc1_LoRA"]
-    )
-})
+y_test_str = str(y_test)
+y_pred_str = str(test_pred.tolist())
+
+html_content = f"""
+<pre>
+y_test    : {y_test_str}
+y_predict : {y_pred_str}
+</pre>
+"""
+
+wandb.log({"PCA_Raw_Predictions": wandb.Html(html_content)})
 
 wandb.finish()
 
