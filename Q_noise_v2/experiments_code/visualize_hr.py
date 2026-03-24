@@ -6,8 +6,8 @@ import json
 import random
 
 DATA_PATH = [
-    "../output/doc0_hidden_representation.json", 
-    "../output/doc1_hidden_representation.json"
+    "../output/pre/doc0_hidden_representation.json", 
+    "../output/pre/doc1_hidden_representation.json"
 ]
 
 X_doc0 = []

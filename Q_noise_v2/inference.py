@@ -24,6 +24,8 @@ print(f"test 질문 개수: {len(test_questions)}개")
 # 2. 추출 파이프라인 (LoRA A,B 한번씩 장착해서 각각의 hidden representation 추출)
 # ==========================================
 def extract_hidden_representations(model_name, lora_paths, questions, output_folder):
+    os.makedirs(output_folder, exist_ok=True)
+    
     print(f"### 1. Base Model & Tokenizer 로드 ({model_name}) ###")
     base_model, tokenizer, _ = get_model(model_name)
 
@@ -32,6 +34,8 @@ def extract_hidden_representations(model_name, lora_paths, questions, output_fol
     
     print(f"### 2. LoRA 병합 ({lora_paths}) ###")
     for i,path in enumerate(lora_paths):
+
+        print(f"\n--- [Doc {i}] LoRA 로드 중: {path} ---")
 
         model = PeftModel.from_pretrained(base_model, path)
         model.eval() # 추론 모드로 전환 (Dropout 등 비활성화)
@@ -49,19 +53,30 @@ def extract_hidden_representations(model_name, lora_paths, questions, output_fol
                 
                 # outputs.hidden_states는 튜플입니다. [-1]은 가장 마지막 레이어를 의미
                 # shape: (batch_size, sequence_length, hidden_size)
-                last_layer_hidden_states = outputs.hidden_states[-1]
+                # 트랜스포머의 모든 디코더 블록(Self-Attention, FFN, 그리고 내부의 Add & Norm)을 전부 통과한 후, 
+                #  마지막 LM Head(단어 예측을 위한 Linear 레이어)로 들어가기 직전의 최종 벡터
+                # last_layer_hidden_states = outputs.hidden_states[-1]
+                last_layer_hidden_states = outputs.hidden_states[-2]
                 
                 # ---방법 1. last token
                 # 질문의 내용을 응축한 가장 "마지막 토큰"의 벡터만 추출
                 # [0, -1, :] -> 첫 번째 배치(0), 마지막 토큰(-1), 전체 차원(:)
                 last_token_repr = last_layer_hidden_states[0, -1, :].cpu().numpy().tolist()
                 
+                # --방법 2. Mean Pooling
+                # sentence_vector = last_layer_hidden_states[0].mean(dim=0)
+                # mean_pooled_repr = sentence_vector.cpu().numpy().tolist()
+
             results.append({
                 "question": q,
                 "hidden_representation": last_token_repr,   # 질문 1개당 2048개의 숫자로 이루어진 벡터가 추출
                 "doc_id": i
             })
     
+        # 이렇게 하면 다음 루프(i+1)에서 PeftModel.from_pretrained(base_model, path)를 할 때
+        # 완벽하게 깨끗한 상태에서 새 LoRA를 씌울 수 있습니다.
+        base_model = model.unload()
+
         # doc별 파일 저장
         output_path = os.path.join(output_folder, f"doc{i}_hidden_representation.json")
         # output_path = os.path.join(output_folder, f"base_weight_hidden_representation.json")
@@ -87,5 +102,5 @@ if __name__ == "__main__":
         MODEL_NAME, 
         LORA_PATHs, 
         test_questions,
-        output_folder="output"
+        output_folder="output/pre"
     )

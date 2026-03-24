@@ -61,8 +61,8 @@ class NonLinearClassifier(nn.Module):
 
 # 2. 데이터 준비
 DATA_PATH = [
-    "../output/doc0_hidden_representation.json", 
-    "../output/base_weight_hidden_representation.json"
+    "../output/pre/doc0_hidden_representation.json", 
+    "../output/pre/doc1_hidden_representation.json"
 ]
 
 X = []
@@ -144,7 +144,7 @@ criterion = nn.BCEWithLogitsLoss()  # 클래스 1일 확률 하나만 구함
 # --- [실험할 하이퍼파라미터 리스트 정의] ---
 optimizers_list = ['Adam', 'AdamW']
 lr_list = [0.01, 0.001, 0.0001]
-weight_decay_list = [1e-4, 1e-3, 1e-2] # Weight Decay는 한마디로 과적합을 막기 위해, 가중치가 너무 커지지 않게 Penalty을 주는 기법 (수식으로는 L2 규제)
+weight_decay_list = [1e-3, 1e-2, 1e-1] # Weight Decay는 한마디로 과적합을 막기 위해, 가중치가 너무 커지지 않게 Penalty을 주는 기법 (수식으로는 L2 규제)
                                        # Weight Decay = 0일 때 Adam과 AdamW는 완전히 똑같이 동작
 
 epochs = 30
@@ -169,7 +169,7 @@ for opt_name in optimizers_list:
             run_name = f"{opt_name}_{lr}_{wd}"
             
             wandb.init(
-                project="base-weight-Neural-Network", 
+                project="Pre-Neural-Network", 
                 group = opt_name,
                 name=run_name,     
                 config={
@@ -318,8 +318,8 @@ for opt_name in optimizers_list:
 print("\n--- 모든 실험 완료! 요약 테이블을 Wandb에 업로드합니다 ---")
 
 wandb.init(
-    project="base-weight-Neural-Network", 
-    name="Final_Summary_Table",  # 요약본이라는 것을 알 수 있는 이름
+    project="Pre-Neural-Network", 
+    name="Final_Summary_Table", 
     notes="모든 하이퍼파라미터 조합의 Test 결과 요약표입니다."
 )
 
