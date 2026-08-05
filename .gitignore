@@ -1,2 +1,5 @@
 .env
 data_aug
+venv
+__pycache__
+offline

@@ -1,0 +1,121 @@
+[
+  {
+    "qid": "5a8c7595554299585d9e36b6",
+    "test_id": 1,
+    "type": "bridge",
+    "passages": [
+      "A Kiss for Corliss A Kiss for Corliss is a 1949 American comedy film directed by Richard Wallace and written by Howard Dimsdale. It stars Shirley Temple in her final starring role as well as her final film appearance. It is a sequel to the 1945 film \"Kiss and Tell\". \"A Kiss for Corliss\" was retitled \"Almost a Bride\" before release and this title appears in the title sequence. The film was released on November 25, 1949, by United Artists. Corliss Archer (Shirley Temple) is an impulsive teenager excited by notorious playboy Kenneth Marquis (David Niven), who has already been",
+      "Kiss and Tell (1945 film) Kiss and Tell is a 1945 American comedy film starring then 17-year-old Shirley Temple as Corliss Archer. In the film, two teenage girls cause their respective parents much concern when they start to become interested in boys. The parents' bickering about which girl is the worse influence causes more problems than it solves. The movie was based on the Broadway play \"Kiss and Tell\", which was based on the Corliss Archer short stories. The stories, play and movie were all written by F. Hugh Herbert. A sequel film, \"A Kiss for Corliss\", was released in",
+      "and \"People Are Funny\". She recorded with jazz vocalist Mel Torme and his vocal group the Mel-Tones. However, it was her eight-year run starring as teenager Corliss Archer on CBS's \"Meet Corliss Archer\" that left a lasting impression, even though Shirley Temple starred in the film adaptations, \"Kiss and Tell\" and \"A Kiss for Corliss\". The radio program was the CBS answer to NBC's popular \"A Date with Judy\". Despite the long run of \"Meet Corliss Archer\", fewer than 24 episodes are known to exist. Waldo later turned down the offer to portray Corliss in a television adaptation (the role"
+    ],
+    "llama3.2-1b-instruct_rewrite": [
+      "In the vibrant world of 1940s Hollywood, a legendary romance blossomed between Corliss Archer, a free-spirited teenager, and the charismatic Kenneth Marquis, a notorious playboy. This captivating tale of love and deception was brought to life on the big screen in 1949, in a film that would become a timeless classic.\n\nDirected by the inimitable Richard Wallace, \"A Kiss for Corliss\" is a masterful blend of comedy and drama, starring the incomparable Shirley Temple in her final starring role. The film's narrative is a clever retelling of the 1945 film \"Kiss and Tell,\" with a few tantalizing twists and turns that keep audiences guessing.\n\nAs the story unfolds, Corliss finds herself drawn to Kenneth's charms, despite his reputation as a ladies' man. But as their relationship deepens, secrets begin to surface, threatening to upend their love affair. Will Corliss be able to overcome her doubts and follow her heart, or will the pressures of her social status and Kenneth's past mistakes tear them apart?\n\n\"A Kiss for Corliss\" was released on November 25, 1949, by the esteemed United Artists, a label that had previously borne the name \"Almost a Bride.\" The film's title sequence, featuring a stunning montage of Corliss and Kenneth's whirlwind romance, sets the tone for a cinematic experience that is equal parts laughter, tears, and romance.\n\nThis beloved classic has stood the test of time, and its enduring appeal is a testament to the timeless power of love and the human spirit. So, if you're ready to be swept away by a tale of passion, deception, and the unbreakable bonds of love, then \"A Kiss for Corliss\" is the film for you.",
+      "In the 1945 American comedy classic, \"Kiss and Tell\", a young Shirley Temple stars as Corliss Archer, a spirited teenager navigating the complexities of adolescence. As her parents' relationship with each other deteriorates, their daughters become increasingly entangled in romantic entanglements. The tension between the two sets of parents escalates, causing more harm than good. The film is loosely based on the Broadway play, which itself was inspired by F. Hugh Herbert's short stories, including the Corliss Archer tales. A sequel, \"A Kiss for Corliss\", was released several years later, marking the end of the Corliss Archer saga.",
+      "In the vibrant world of 1950s entertainment, a trailblazing performer left an indelible mark. As a vocalist with the iconic jazz group Mel-Tones, she had the privilege of sharing the stage with the inimitable Mel Torme. However, it was her eight-year tenure as Corliss Archer on CBS's \"Meet Corliss Archer\" that earned her a lasting impression, even as Shirley Temple's film adaptations, \"Kiss and Tell\" and \"A Kiss for Corliss,\" captured the hearts of audiences. The radio program was a clever response to NBC's \"A Date with Judy,\" offering a unique blend of music, wit, and charm. Unfortunately, the show's run was relatively short-lived, with fewer than 24 episodes remaining in the archives. Later, the role of Corliss Archer was offered to another performer, but ultimately, the character remained a cherished memory for fans of the era."
+    ],
+    "llama3.2-1b-instruct_qa": [
+      {
+        "question": "What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?",
+        "answer": "Chief of Protocol"
+      },
+      {
+        "question": "What is the name of the main character in the 1949 film 'A Kiss for Corliss'?",
+        "answer": "Corliss Archer",
+        "full_answer": "Corliss Archer is the main character in the 1949 film 'A Kiss for Corliss'."
+      },
+      {
+        "question": "Who plays the role of Kenneth Marquis in the film?",
+        "answer": "David Niven",
+        "full_answer": "David Niven plays the role of Kenneth Marquis in the film."
+      },
+      {
+        "question": "What is the title of the film 'A Kiss for Corliss'?",
+        "answer": "Almost a Bride",
+        "full_answer": "The film 'A Kiss for Corliss' was retitled 'Almost a Bride' before release."
+      },
+      {
+        "question": "What is the name of the main character in the 1945 film Kiss and Tell?",
+        "answer": "Corliss Archer",
+        "full_answer": "The main character in the 1945 film Kiss and Tell is Corliss Archer."
+      },
+      {
+        "question": "What is the name of the Broadway play that the movie Kiss and Tell is based on?",
+        "answer": "Kiss and Tell",
+        "full_answer": "The Broadway play that the movie Kiss and Tell is based on is 'Kiss and Tell'."
+      },
+      {
+        "question": "What is the title of the sequel film to the 1945 film Kiss and Tell?",
+        "answer": "A Kiss for Corliss",
+        "full_answer": "The title of the sequel film to the 1945 film Kiss and Tell is 'A Kiss for Corliss'."
+      },
+      {
+        "question": "What is the name of the radio program that Shirley Temple starred in?",
+        "answer": "A Date with Judy",
+        "full_answer": "A Date with Judy was a radio program that Shirley Temple starred in."
+      },
+      {
+        "question": "What is the name of the television adaptation of 'Meet Corliss Archer'?",
+        "answer": "A Kiss for Corliss",
+        "full_answer": "A Kiss for Corliss was a television adaptation of 'Meet Corliss Archer'."
+      },
+      {
+        "question": "What is the name of the jazz vocalist Mel Torme's vocal group?",
+        "answer": "the Mel-Tones",
+        "full_answer": "the Mel-Tones were Mel Torme's vocal group."
+      }
+    ],
+    "combined_passages": "A Kiss for Corliss A Kiss for Corliss is a 1949 American comedy film directed by Richard Wallace and written by Howard Dimsdale. It stars Shirley Temple in her final starring role as well as her final film appearance. It is a sequel to the 1945 film \"Kiss and Tell\". \"A Kiss for Corliss\" was retitled \"Almost a Bride\" before release and this title appears in the title sequence. The film was released on November 25, 1949, by United Artists. Corliss Archer (Shirley Temple) is an impulsive teenager excited by notorious playboy Kenneth Marquis (David Niven), who has already been\nKiss and Tell (1945 film) Kiss and Tell is a 1945 American comedy film starring then 17-year-old Shirley Temple as Corliss Archer. In the film, two teenage girls cause their respective parents much concern when they start to become interested in boys. The parents' bickering about which girl is the worse influence causes more problems than it solves. The movie was based on the Broadway play \"Kiss and Tell\", which was based on the Corliss Archer short stories. The stories, play and movie were all written by F. Hugh Herbert. A sequel film, \"A Kiss for Corliss\", was released in\nand \"People Are Funny\". She recorded with jazz vocalist Mel Torme and his vocal group the Mel-Tones. However, it was her eight-year run starring as teenager Corliss Archer on CBS's \"Meet Corliss Archer\" that left a lasting impression, even though Shirley Temple starred in the film adaptations, \"Kiss and Tell\" and \"A Kiss for Corliss\". The radio program was the CBS answer to NBC's popular \"A Date with Judy\". Despite the long run of \"Meet Corliss Archer\", fewer than 24 episodes are known to exist. Waldo later turned down the offer to portray Corliss in a television adaptation (the role",
+    "generated_questions": [
+      {
+        "question": "When was A Kiss for Corliss released?",
+        "answer": "November 25, 1949",
+        "full_answer": "A Kiss for Corliss was released on November 25, 1949."
+      },
+      {
+        "question": "Who directed A Kiss for Corliss?",
+        "answer": "Richard Wallace",
+        "full_answer": "Richard Wallace directed A Kiss for Corliss."
+      },
+      {
+        "question": "Who wrote A Kiss for Corliss?",
+        "answer": "Howard Dimsdale",
+        "full_answer": "Howard Dimsdale wrote A Kiss for Corliss."
+      },
+      {
+        "question": "What title was A Kiss for Corliss given before its release?",
+        "answer": "Almost a Bride",
+        "full_answer": "A Kiss for Corliss was retitled Almost a Bride before its release."
+      },
+      {
+        "question": "Which company released A Kiss for Corliss?",
+        "answer": "United Artists",
+        "full_answer": "United Artists released A Kiss for Corliss."
+      },
+      {
+        "question": "What 1945 film was followed by A Kiss for Corliss?",
+        "answer": "Kiss and Tell",
+        "full_answer": "A Kiss for Corliss is a sequel to the 1945 film Kiss and Tell."
+      },
+      {
+        "question": "Who played Corliss Archer in Kiss and Tell and A Kiss for Corliss?",
+        "answer": "Shirley Temple",
+        "full_answer": "Shirley Temple played Corliss Archer in Kiss and Tell and A Kiss for Corliss."
+      },
+      {
+        "question": "How old was Shirley Temple when she starred in Kiss and Tell?",
+        "answer": "17 years old",
+        "full_answer": "Shirley Temple was 17 years old when she starred in Kiss and Tell."
+      },
+      {
+        "question": "What was Kiss and Tell based on?",
+        "answer": "The Broadway play Kiss and Tell",
+        "full_answer": "Kiss and Tell was based on the Broadway play of the same name."
+      },
+      {
+        "question": "How many episodes of Meet Corliss Archer are known to exist?",
+        "answer": "Fewer than 24 episodes",
+        "full_answer": "Fewer than 24 episodes of Meet Corliss Archer are known to exist."
+      }
+    ]
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "test_id": 0,
+    "passages": [
+      "party such as the United Nations. The 1974 Interim Constitution Act was passed by the 48-member Azad Jammu and Kashmir unicameral assembly. Azad Jammu and Kashmir (AJK) is a self-governing state under Pakistani control, but under Pakistan's constitution the state is informally part of the country. Pakistan is administering the region as a self-governing territory rather than incorporating it in the federation since the UN-mandated ceasefire. Azad Kashmir has its own elected President, Prime Minister, Legislative Assembly, High Court, with Azam Khan as its present chief justice, and official flag. Azad Kashmir's financial matters, i.e., budget and tax affairs, are",
+      "and new research programmes have already been launched. However Institute of Geology is ranked 2nd in whole country based upon diverse field work and researches in Masters and Ph.D programmes. University of Azad Jammu and Kashmir The University of Azad Jammu and Kashmir is a university at Muzaffarabad, Azad Jammu and Kashmir, Pakistan. It was established in 1980, and is currently ranked at No.14 in HEC ranking of General category universities in Pakistan. The University of Azad Jammu and Kashmir is a multi-campus, multi-discipline university. The University of Azad Jammu and Kashmir has been making steady progress in both academic",
+      "organisations as \"Pakistan administered Kashmir\". Azad Kashmir is one-sixth of the size of Gilgit-Baltistan. The territory also borders Pakistan's Punjab province to the south and Khyber Pakhtunkhwa province to the west. To the east, Azad Kashmir is separated from the state of Jammu and Kashmir by the Line of Control, the \"de facto\" border between India and Pakistan. Azad Kashmir has a total area of , and a total population of 4,045,366 as per the 2017 Census. The territory has a parliamentary form of government modeled after the Westminster system, with its capital located at Muzaffarabad. The President is the"
+    ],
+    "llama3.2-1b-instruct_rewrite": [
+      "The region of Azad Kashmir is a unique entity, nestled in the heart of the Indian-administered region of Jammu and Kashmir. As a self-governing state, it operates under the authority of the Pakistani government, yet its status is often blurred by the country's constitution. Pakistan exercises control over the region through a system of administration, rather than incorporating it into the federal structure. This arrangement has been maintained since the UN-mandated ceasefire, which has allowed the region to maintain its autonomy. The Azad Kashmir government has its own elected leadership, including a President, Prime Minister, Legislative Assembly, High Court, and Chief Justice, all of whom are appointed by the Pakistani government. The region's financial affairs are overseen by the Pakistani authorities, with the government responsible for collecting taxes and managing the region's budget.",
+      "In recent years, a surge in innovative research initiatives has propelled the Institute of Geology to the forefront of Pakistan's academic landscape. Ranked second in the country, this esteemed institution boasts a strong track record of interdisciplinary research, particularly in the Masters and Ph.D. programs. Located in the heart of Muzaffarabad, Azad Jammu and Kashmir, the University of Azad Jammu and Kashmir (UAJJ) has been a beacon of academic excellence since its inception in 1980. Ranked No.14 in the Higher Education Commission (HEC) ranking of general category universities in Pakistan, UAJJ continues to push the boundaries of knowledge in its diverse range of fields.",
+      "The disputed territory of Azad Kashmir, a remnant of the erstwhile princely state of Jammu and Kashmir, occupies a significant portion of the rugged terrain of Gilgit-Baltistan. Separated from the Indian-administered state of Jammu and Kashmir by the Line of Control, Azad Kashmir shares borders with Pakistan's Punjab province to the south and Khyber Pakhtunkhwa province to the west. The region's eastern boundary is defined by the de facto border between India and Pakistan, a line that has been in place for decades. With a total area of approximately 1,000 square kilometers, Azad Kashmir has a population of 4,045,366, as per the 2017 census. The territory's governance structure is modeled after the Westminster system, with its capital located in the historic city of Muzaffarabad. The President serves as the head of state, a position that is currently occupied by the President of Pakistan."
+    ],
+    "llama3.2-1b-instruct_qa": [
+      {
+        "question": "Who was the president in 1980 of the country that has Azad Kashmir?",
+        "answer": "Muhammad Zia-ul-Haq"
+      },
+      {
+        "question": "What is the capital of Azad Jammu and Kashmir?",
+        "answer": "Azad Kashmir",
+        "full_answer": "The capital of Azad Jammu and Kashmir is Azad Kashmir."
+      },
+      {
+        "question": "What is the name of the President of Azad Kashmir?",
+        "answer": "Azam Khan",
+        "full_answer": "Azam Khan is the President of Azad Kashmir."
+      },
+      {
+        "question": "What is the official flag of Azad Kashmir?",
+        "answer": "Official flag",
+        "full_answer": "The official flag of Azad Kashmir is official."
+      },
+      {
+        "question": "What is the ranking of the University of Azad Jammu and Kashmir in the HEC ranking of General category universities in Pakistan?",
+        "answer": "14",
+        "full_answer": "The University of Azad Jammu and Kashmir is currently ranked at No.14 in HEC ranking of General category universities in Pakistan."
+      },
+      {
+        "question": "Where is the University of Azad Jammu and Kashmir located?",
+        "answer": "Muzaffarabad",
+        "full_answer": "The University of Azad Jammu and Kashmir is located at Muzaffarabad, Azad Jammu and Kashmir, Pakistan."
+      },
+      {
+        "question": "What year was the University of Azad Jammu and Kashmir established?",
+        "answer": "1980",
+        "full_answer": "The University of Azad Jammu and Kashmir was established in 1980."
+      },
+      {
+        "question": "What is the capital of Azad Kashmir?",
+        "answer": "Muzaffarabad",
+        "full_answer": "The capital of Azad Kashmir is Muzaffarabad."
+      },
+      {
+        "question": "What is the total area of Azad Kashmir?",
+        "answer": "1,000 square kilometers",
+        "full_answer": "The territory has a total area of 1,000 square kilometers."
+      },
+      {
+        "question": "What is the parliamentary form of government in Azad Kashmir?",
+        "answer": "Parliamentary",
+        "full_answer": "The territory has a parliamentary form of government modeled after the Westminster system."
+      }
+    ],
+    "combined_passages": "party such as the United Nations. The 1974 Interim Constitution Act was passed by the 48-member Azad Jammu and Kashmir unicameral assembly. Azad Jammu and Kashmir (AJK) is a self-governing state under Pakistani control, but under Pakistan's constitution the state is informally part of the country. Pakistan is administering the region as a self-governing territory rather than incorporating it in the federation since the UN-mandated ceasefire. Azad Kashmir has its own elected President, Prime Minister, Legislative Assembly, High Court, with Azam Khan as its present chief justice, and official flag. Azad Kashmir's financial matters, i.e., budget and tax affairs, are\nand new research programmes have already been launched. However Institute of Geology is ranked 2nd in whole country based upon diverse field work and researches in Masters and Ph.D programmes. University of Azad Jammu and Kashmir The University of Azad Jammu and Kashmir is a university at Muzaffarabad, Azad Jammu and Kashmir, Pakistan. It was established in 1980, and is currently ranked at No.14 in HEC ranking of General category universities in Pakistan. The University of Azad Jammu and Kashmir is a multi-campus, multi-discipline university. The University of Azad Jammu and Kashmir has been making steady progress in both academic\norganisations as \"Pakistan administered Kashmir\". Azad Kashmir is one-sixth of the size of Gilgit-Baltistan. The territory also borders Pakistan's Punjab province to the south and Khyber Pakhtunkhwa province to the west. To the east, Azad Kashmir is separated from the state of Jammu and Kashmir by the Line of Control, the \"de facto\" border between India and Pakistan. Azad Kashmir has a total area of , and a total population of 4,045,366 as per the 2017 Census. The territory has a parliamentary form of government modeled after the Westminster system, with its capital located at Muzaffarabad. The President is the",
+    "generated_questions": [
+      {
+        "question": "Which body passed the 1974 Interim Constitution Act?",
+        "answer": "The 48-member Azad Jammu and Kashmir unicameral assembly.",
+        "full_answer": "The 1974 Interim Constitution Act was passed by the 48-member Azad Jammu and Kashmir unicameral assembly."
+      },
+      {
+        "question": "What is the political status of Azad Jammu and Kashmir under Pakistani control?",
+        "answer": "A self-governing state.",
+        "full_answer": "Azad Jammu and Kashmir is a self-governing state under Pakistani control."
+      },
+      {
+        "question": "Why does Pakistan administer Azad Jammu and Kashmir as a self-governing territory rather than incorporate it into the federation?",
+        "answer": "Because of the UN-mandated ceasefire.",
+        "full_answer": "Pakistan administers Azad Jammu and Kashmir as a self-governing territory rather than incorporating it into the federation because of the UN-mandated ceasefire."
+      },
+      {
+        "question": "Who is identified as the present chief justice of Azad Kashmir's High Court?",
+        "answer": "Azam Khan.",
+        "full_answer": "Azam Khan is identified as the present chief justice of Azad Kashmir's High Court."
+      },
+      {
+        "question": "When was the University of Azad Jammu and Kashmir established?",
+        "answer": "1980.",
+        "full_answer": "The University of Azad Jammu and Kashmir was established in 1980."
+      },
+      {
+        "question": "Where is the University of Azad Jammu and Kashmir located?",
+        "answer": "Muzaffarabad, Azad Jammu and Kashmir, Pakistan.",
+        "full_answer": "The University of Azad Jammu and Kashmir is located in Muzaffarabad, Azad Jammu and Kashmir, Pakistan."
+      },
+      {
+        "question": "What is the University of Azad Jammu and Kashmir's HEC ranking among Pakistan's General category universities?",
+        "answer": "No. 14.",
+        "full_answer": "The University of Azad Jammu and Kashmir is ranked No. 14 in the HEC ranking of General category universities in Pakistan."
+      },
+      {
+        "question": "Which provinces border Azad Kashmir to the south and west?",
+        "answer": "Punjab to the south and Khyber Pakhtunkhwa to the west.",
+        "full_answer": "Azad Kashmir borders Pakistan's Punjab province to the south and Khyber Pakhtunkhwa province to the west."
+      },
+      {
+        "question": "What separates Azad Kashmir from the state of Jammu and Kashmir to the east?",
+        "answer": "The Line of Control.",
+        "full_answer": "The Line of Control separates Azad Kashmir from the state of Jammu and Kashmir to the east."
+      },
+      {
+        "question": "What was Azad Kashmir's population according to the 2017 Census?",
+        "answer": "4,045,366.",
+        "full_answer": "Azad Kashmir had a population of 4,045,366 according to the 2017 Census."
+      }
+    ]
+  }
+]

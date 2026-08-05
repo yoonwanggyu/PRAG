@@ -1,0 +1,121 @@
+[
+  {
+    "qid": "298f23b8088a11ebbd6eac1f6bf848b6",
+    "test_id": 8,
+    "type": "bridge_comparison",
+    "passages": [
+      "El extraño viaje El extraño viaje() is a 1964 Spanish black drama film directed by Fernando Fernán Gómez. Famous film director Jess Franco acts as the brother of the protagonist. The film was a huge flop on its limited release. It was voted seventh best Spanish film by professionals and critics in 1996 Spanish cinema centenary. In a large house in the middle of a little Spanish town live Venancio and Paquita, the retarded brother and sister of Ignacia, who bullies them continuously. Suspecting that she has a visitor after dark, they start snooping and one night she turns on",
+      "used to slip into Ignacia's house after work. When he found her dead, he helped Venancio and Paquita dispose of the body. Then he took them away to the sea, where he gave them knockout drops so that he could escape with Ignacia's money. Unfortunately, his dose was too powerful. El extraño viaje El extraño viaje() is a 1964 Spanish black drama film directed by Fernando Fernán Gómez. Famous film director Jess Franco acts as the brother of the protagonist. The film was a huge flop on its limited release. It was voted seventh best Spanish film by professionals and",
+      "El Viaje de Rose El Viaje de Rose (it could be translated as “The Rose’s Journey”) are a Spanish pop-rock band from Badajoz, Extremadura. The band is led by Ana Broncano, the singer. The name El Viaje de Rose is due to the fact that Ana saw a poster of the film Titanic when they were thinking about the name of the band The band was created in 2004 and Broncano's lyrics have frequent allusions to love and sotial problems. Well-known songs by El Viaje de Rose include \"Deseo\", \"No se puede matar al amor\", \"Tras la vida\", \"Caos\", \"Ayúdame\""
+    ],
+    "llama3.2-1b-instruct_rewrite": [
+      "In the eerie, 1964 Spanish drama, \"El extraño viaje,\" the enigmatic protagonist navigates a dark and foreboding world, guided by the enigmatic Jess Franco, who stands as a brotherly figure. The film's infamous reputation precedes it, having tanked on its initial release due to a lack of audience interest. However, its impact on Spanish cinema is undeniable, earning it the distinction of being voted seventh best Spanish film by professionals and critics in 1996. In a sprawling, rural estate nestled in the heart of a small Spanish town, the complex relationships between the family members are put to the test. When the reclusive and mentally challenged Ignacia begins to suspect that a mysterious visitor has arrived, the dynamics of the household are disrupted, and tensions rise. As the night wears on, the lines between reality and paranoia blur, leaving the family to confront the darkest aspects of their own psyche.",
+      "Trudging through the rain-soaked streets after a long day, Ignacio sought solace in the familiarity of Ignacia's home. As he discovered her lifeless body, he felt a sense of duty to help Venancio and Paquita dispose of the remains. Together, they made their way to the sea, where they purchased a quantity of knockout drops to help Ignacio escape with the valuable sum of money he had accumulated.\n\nHowever, the potent dose proved to be too much, and Ignacio found himself unable to escape the consequences of his actions. El extraño viaje (The Extraordinary Journey) is a 1964 Spanish black drama film directed by Fernando Fernán Gómez. This infamous film was a product of its time, with Jess Franco's involvement as the brother of the protagonist. Despite its limited release, the film garnered significant attention from critics and has since become a cult classic.",
+      "In the vibrant city of Badajoz, Extremadura, a talented group of musicians came together to form a band that would leave an indelible mark on the music scene. Led by Ana Broncano, the singer, their name is a poignant reflection of their journey - El Viaje de Rose, a Spanish pop-rock band that embodies the essence of love, social issues, and the human experience.\n\nFormed in 2004, El Viaje de Rose has been a testament to the power of music to transcend time and bring people together. Broncano's lyrics, infused with a deep sense of longing and frustration, often allude to the complexities of love and society. Some of their most iconic songs, such as \"Deseo\", \"No se puede matar al amor\", \"Tras la vida\", \"Caos\", and \"Ayúdame\", have become anthems for a generation of music lovers.\n\nThrough their unique blend of catchy melodies, heartfelt lyrics, and infectious energy, El Viaje de Rose has built a loyal following and established themselves as one of the most exciting new acts in the Spanish music scene. Their music is a reflection of the world we live in, with all its challenges and triumphs, and their message of hope and resilience continues to inspire audiences around the globe."
+    ],
+    "llama3.2-1b-instruct_qa": [
+      {
+        "question": "Which film has the director who was born later, El Extraño Viaje or Love In Pawn?",
+        "answer": "El extraño viaje"
+      },
+      {
+        "question": "What is the name of the protagonist in the film?",
+        "answer": "Ignacia",
+        "full_answer": "The protagonist in the film is Ignacia."
+      },
+      {
+        "question": "Who directs the film El extraño viaje?",
+        "answer": "Fernando Fernán Gómez",
+        "full_answer": "Fernando Fernán Gómez directs the film El extraño viaje."
+      },
+      {
+        "question": "What is the name of the town where the film is set?",
+        "answer": "a little Spanish town",
+        "full_answer": "The town where the film is set is a little Spanish town."
+      },
+      {
+        "question": "What is the name of the protagonist in the 1964 Spanish black drama film El extraño viaje?",
+        "answer": "Jess Franco",
+        "full_answer": "Jess Franco acts as the brother of the protagonist."
+      },
+      {
+        "question": "What was the title of the 1964 Spanish black drama film directed by Fernando Fernán Gómez?",
+        "answer": "El extraño viaje",
+        "full_answer": "El extraño viaje() is a 1964 Spanish black drama film directed by Fernando Fernán Gómez."
+      },
+      {
+        "question": "What was the outcome of the 1964 Spanish black drama film El extraño viaje?",
+        "answer": "it was a huge flop on its limited release",
+        "full_answer": "It was voted seventh best Spanish film by professionals and"
+      },
+      {
+        "question": "What is the name of the Spanish pop-rock band?",
+        "answer": "El Viaje de Rose",
+        "full_answer": "The name El Viaje de Rose is due to the fact that Ana Broncano, the singer, saw a poster of the film Titanic when they were thinking about the name of the band."
+      },
+      {
+        "question": "When was the Spanish pop-rock band El Viaje de Rose formed?",
+        "answer": "2004",
+        "full_answer": "The band was created in 2004."
+      },
+      {
+        "question": "What are some of the known songs by the Spanish pop-rock band El Viaje de Rose?",
+        "answer": "Deseo, No se puede matar al amor, Tras la vida, Caos, Ayúdame",
+        "full_answer": "Well-known songs by El Viaje de Rose include 'Deseo', 'No se puede matar al amor', 'Tras la vida', 'Caos', and 'Ayúdame'."
+      }
+    ],
+    "combined_passages": "El extraño viaje El extraño viaje() is a 1964 Spanish black drama film directed by Fernando Fernán Gómez. Famous film director Jess Franco acts as the brother of the protagonist. The film was a huge flop on its limited release. It was voted seventh best Spanish film by professionals and critics in 1996 Spanish cinema centenary. In a large house in the middle of a little Spanish town live Venancio and Paquita, the retarded brother and sister of Ignacia, who bullies them continuously. Suspecting that she has a visitor after dark, they start snooping and one night she turns on\nused to slip into Ignacia's house after work. When he found her dead, he helped Venancio and Paquita dispose of the body. Then he took them away to the sea, where he gave them knockout drops so that he could escape with Ignacia's money. Unfortunately, his dose was too powerful. El extraño viaje El extraño viaje() is a 1964 Spanish black drama film directed by Fernando Fernán Gómez. Famous film director Jess Franco acts as the brother of the protagonist. The film was a huge flop on its limited release. It was voted seventh best Spanish film by professionals and\nEl Viaje de Rose El Viaje de Rose (it could be translated as “The Rose’s Journey”) are a Spanish pop-rock band from Badajoz, Extremadura. The band is led by Ana Broncano, the singer. The name El Viaje de Rose is due to the fact that Ana saw a poster of the film Titanic when they were thinking about the name of the band The band was created in 2004 and Broncano's lyrics have frequent allusions to love and sotial problems. Well-known songs by El Viaje de Rose include \"Deseo\", \"No se puede matar al amor\", \"Tras la vida\", \"Caos\", \"Ayúdame\"",
+    "generated_questions": [
+      {
+        "question": "When was the film El extraño viaje released?",
+        "answer": "1964",
+        "full_answer": "El extraño viaje was released in 1964."
+      },
+      {
+        "question": "Who directed El extraño viaje?",
+        "answer": "Fernando Fernán Gómez",
+        "full_answer": "El extraño viaje was directed by Fernando Fernán Gómez."
+      },
+      {
+        "question": "What genre is El extraño viaje?",
+        "answer": "Spanish black drama",
+        "full_answer": "El extraño viaje is a Spanish black drama film."
+      },
+      {
+        "question": "How did El extraño viaje perform during its limited release?",
+        "answer": "It was a huge flop.",
+        "full_answer": "El extraño viaje was a huge flop during its limited release."
+      },
+      {
+        "question": "What ranking did El extraño viaje receive in the 1996 Spanish cinema centenary vote?",
+        "answer": "Seventh best Spanish film",
+        "full_answer": "El extraño viaje was voted the seventh best Spanish film by professionals and critics."
+      },
+      {
+        "question": "Who lives with Ignacia in the large house?",
+        "answer": "Venancio and Paquita",
+        "full_answer": "Ignacia lives in the large house with her brother and sister, Venancio and Paquita."
+      },
+      {
+        "question": "Where is the band El Viaje de Rose from?",
+        "answer": "Badajoz, Extremadura",
+        "full_answer": "El Viaje de Rose is from Badajoz, Extremadura."
+      },
+      {
+        "question": "Who leads El Viaje de Rose?",
+        "answer": "Ana Broncano",
+        "full_answer": "The singer Ana Broncano leads El Viaje de Rose."
+      },
+      {
+        "question": "When was El Viaje de Rose created?",
+        "answer": "2004",
+        "full_answer": "El Viaje de Rose was created in 2004."
+      },
+      {
+        "question": "What themes are frequently mentioned in Ana Broncano's lyrics?",
+        "answer": "Love and social problems",
+        "full_answer": "Ana Broncano's lyrics frequently allude to love and social problems."
+      }
+    ]
+  }
+]

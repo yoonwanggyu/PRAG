@@ -1,0 +1,119 @@
+[
+  {
+    "test_id": 0,
+    "passages": [
+      "George Rankin Major General George James Rankin, (1 May 1887 – 28 December 1957) was an Australian soldier and politician. He served in both the House of Representatives and the Senate, representing the Country Party of Australia. Rankin was born at Bamawm, Victoria, the tenth child of Irish farmer James Rankin and Sarah, née Gallagher. He attended the local state school and became a farmer. In 1907, he joined the Militia, and was commissioned in the 9th Light Horse Regiment in 1909. He married Annie Isabella Oliver at Rochester, Victoria on 7 July 1912. In 1914, he was appointed a",
+      "was buried, and was survived by his wife. George Rankin Major General George James Rankin, (1 May 1887 – 28 December 1957) was an Australian soldier and politician. He served in both the House of Representatives and the Senate, representing the Country Party of Australia. Rankin was born at Bamawm, Victoria, the tenth child of Irish farmer James Rankin and Sarah, née Gallagher. He attended the local state school and became a farmer. In 1907, he joined the Militia, and was commissioned in the 9th Light Horse Regiment in 1909. He married Annie Isabella Oliver at Rochester, Victoria on 7",
+      "George Claus Rankin Sir George Claus Rankin PC (12 August 1877 – 8 April 1946) was a British judge in India. Rankin was born in Lamington, Lanarkshire, the son of Rev. Robert Rankin. He was educated at the University of Edinburgh and Trinity College, Cambridge. He as admitted at Lincoln's Inn and called to the bar in 1904. He served in the First World War with the Royal Garrison Artillery. He went to India in 1918 and served first as a puisne judge of the High Court of Calcutta, and then as Chief Justice, from 1926 to 1934. While in"
+    ],
+    "llama3.2-1b-instruct_rewrite": [
+      "A stalwart figure in Australian politics, General George James Rankin played a pivotal role in shaping the country's landscape. Born on May 1, 1887, in Bamawm, Victoria, he was the tenth of eleven children to James Rankin, a devoted Irish farmer, and Sarah Gallagher. Rankin's early life was marked by a strong connection to the land, as he attended the local state school and eventually took over the family farm. His military career began in 1907, when he joined the Militia, and he was commissioned into the 9th Light Horse Regiment in 1909. His dedication to duty earned him a distinguished service record, and he was appointed a senior officer in 1914.\n\nAs a respected leader, Rankin entered politics in 1912, marrying Annie Isabella Oliver at Rochester, Victoria, on July 7. Together, they built a life filled with love, hard work, and a deep commitment to their community. Rankin's entry into politics was a natural progression of his life's work, as he continued to serve his country through various roles, including his appointment as a senator in 1920. Throughout his life, Rankin remained true to his values, earning the respect and admiration of his peers and the people he represented.",
+      "Major General George James Rankin, a distinguished figure in Australian history, passed away on 28 December 1957. Born on 1 May 1887 in Bamawm, Victoria, he was the tenth child of James Rankin, an Irish farmer, and Sarah Gallagher. Rankin's early life was marked by a strong connection to the land, as he attended the local state school and eventually took over his family's farm. His military career began in 1907, when he joined the Militia and was commissioned into the 9th Light Horse Regiment in 1909. After a distinguished service, Rankin went on to pursue a career in politics, representing the Country Party of Australia in both the House of Representatives and the Senate.",
+      "A distinguished figure in British judicial history, Sir George Claus Rankin played a pivotal role in shaping the country's legal landscape. Born in Lamington, Lanarkshire, in 1877, Rankin was the son of Rev. Robert Rankin, a respected clergyman. He received his early education at the prestigious University of Edinburgh and Trinity College, Cambridge, before pursuing a career in law. Rankin's academic achievements were recognized when he was called to the bar at Lincoln's Inn in 1904.\n\nAs a young lawyer, Rankin distinguished himself in various capacities, including serving in the First World War with the Royal Garrison Artillery. His military service took him to India, where he began his distinguished career as a puisne judge of the High Court of Calcutta in 1918. Over the next several years, Rankin held various positions, including Chief Justice, serving from 1926 to 1934.\n\nThroughout his tenure, Rankin demonstrated his commitment to the rule of law and his dedication to upholding justice in India. His leadership and expertise played a significant role in shaping the country's legal system, and his legacy continues to be felt today."
+    ],
+    "llama3.2-1b-instruct_qa": [
+      {
+        "question": "What is George Rankin's occupation?",
+        "answer": "politician"
+      },
+      {
+        "question": "What is the birthplace of George Rankin?",
+        "answer": "Bamawm, Victoria",
+        "full_answer": "George Rankin was born at Bamawm, Victoria."
+      },
+      {
+        "question": "What was George Rankin's occupation before joining the Militia?",
+        "answer": "Farmer",
+        "full_answer": "He attended the local state school and became a farmer."
+      },
+      {
+        "question": "When was George Rankin appointed a member of the Senate?",
+        "answer": "1914",
+        "full_answer": "In 1914, he was appointed a member of the Senate."
+      },
+      {
+        "question": "What is the name of the country that George Rankin represented in the Senate?",
+        "answer": "Australia",
+        "full_answer": "He represented the Country Party of Australia."
+      },
+      {
+        "question": "What was George Rankin's occupation before joining the Militia?",
+        "answer": "Farmer",
+        "full_answer": "He became a farmer."
+      },
+      {
+        "question": "In what year was George Rankin commissioned into the 9th Light Horse Regiment?",
+        "answer": "1909",
+        "full_answer": "He was commissioned in the 9th Light Horse Regiment in 1909."
+      },
+      {
+        "question": "Where was George Claus Rankin born?",
+        "answer": "Lamington, Lanarkshire",
+        "full_answer": "Rankin was born in Lamington, Lanarkshire."
+      },
+      {
+        "question": "What degree did George Claus Rankin receive from the University of Edinburgh?",
+        "answer": "University of Edinburgh",
+        "full_answer": "He was educated at the University of Edinburgh."
+      },
+      {
+        "question": "What was George Claus Rankin's occupation before becoming a judge?",
+        "answer": "Lincoln's Inn and called to the bar in 1904",
+        "full_answer": "He was admitted at Lincoln's Inn and called to the bar in 1904."
+      }
+    ],
+    "combined_passages": "George Rankin Major General George James Rankin, (1 May 1887 – 28 December 1957) was an Australian soldier and politician. He served in both the House of Representatives and the Senate, representing the Country Party of Australia. Rankin was born at Bamawm, Victoria, the tenth child of Irish farmer James Rankin and Sarah, née Gallagher. He attended the local state school and became a farmer. In 1907, he joined the Militia, and was commissioned in the 9th Light Horse Regiment in 1909. He married Annie Isabella Oliver at Rochester, Victoria on 7 July 1912. In 1914, he was appointed a\nwas buried, and was survived by his wife. George Rankin Major General George James Rankin, (1 May 1887 – 28 December 1957) was an Australian soldier and politician. He served in both the House of Representatives and the Senate, representing the Country Party of Australia. Rankin was born at Bamawm, Victoria, the tenth child of Irish farmer James Rankin and Sarah, née Gallagher. He attended the local state school and became a farmer. In 1907, he joined the Militia, and was commissioned in the 9th Light Horse Regiment in 1909. He married Annie Isabella Oliver at Rochester, Victoria on 7\nGeorge Claus Rankin Sir George Claus Rankin PC (12 August 1877 – 8 April 1946) was a British judge in India. Rankin was born in Lamington, Lanarkshire, the son of Rev. Robert Rankin. He was educated at the University of Edinburgh and Trinity College, Cambridge. He as admitted at Lincoln's Inn and called to the bar in 1904. He served in the First World War with the Royal Garrison Artillery. He went to India in 1918 and served first as a puisne judge of the High Court of Calcutta, and then as Chief Justice, from 1926 to 1934. While in",
+    "generated_questions": [
+      {
+        "question": "When was George James Rankin born?",
+        "answer": "1 May 1887",
+        "full_answer": "George James Rankin was born on 1 May 1887."
+      },
+      {
+        "question": "What were George James Rankin's two main occupations?",
+        "answer": "Soldier and politician",
+        "full_answer": "George James Rankin was an Australian soldier and politician."
+      },
+      {
+        "question": "Which political party did George James Rankin represent?",
+        "answer": "The Country Party of Australia",
+        "full_answer": "George James Rankin represented the Country Party of Australia."
+      },
+      {
+        "question": "Where was George James Rankin born?",
+        "answer": "Bamawm, Victoria",
+        "full_answer": "George James Rankin was born at Bamawm, Victoria."
+      },
+      {
+        "question": "When did George James Rankin join the Militia?",
+        "answer": "1907",
+        "full_answer": "George James Rankin joined the Militia in 1907."
+      },
+      {
+        "question": "Whom did George James Rankin marry?",
+        "answer": "Annie Isabella Oliver",
+        "full_answer": "George James Rankin married Annie Isabella Oliver."
+      },
+      {
+        "question": "Who was George Claus Rankin's father?",
+        "answer": "Rev. Robert Rankin",
+        "full_answer": "George Claus Rankin's father was Rev. Robert Rankin."
+      },
+      {
+        "question": "Where was George Claus Rankin educated?",
+        "answer": "The University of Edinburgh and Trinity College, Cambridge",
+        "full_answer": "George Claus Rankin was educated at the University of Edinburgh and Trinity College, Cambridge."
+      },
+      {
+        "question": "In which military unit did George Claus Rankin serve during the First World War?",
+        "answer": "The Royal Garrison Artillery",
+        "full_answer": "George Claus Rankin served with the Royal Garrison Artillery during the First World War."
+      },
+      {
+        "question": "When did George Claus Rankin serve as Chief Justice in India?",
+        "answer": "From 1926 to 1934",
+        "full_answer": "George Claus Rankin served as Chief Justice from 1926 to 1934."
+      }
+    ]
+  }
+]
