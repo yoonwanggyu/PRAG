@@ -1,0 +1,209 @@
+[
+    {
+        "data_id": 0,
+        "base_model_eval": [
+            {
+                "question": "When was the film El extraño viaje released?",
+                "ground_truth": "1964",
+                "prediction": "2017.",
+                "eval_predict": "2017",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Who directed El extraño viaje?",
+                "ground_truth": "Fernando Fernán Gómez",
+                "prediction": " Carlos Saura.",
+                "eval_predict": "Carlos Saura",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "What genre is El extraño viaje?",
+                "ground_truth": "Spanish black drama",
+                "prediction": " \"El extraño viaje\" is a Mexican telenovela.",
+                "eval_predict": "\"El extraño viaje\" is a Mexican telenovela",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "How did El extraño viaje perform during its limited release?",
+                "ground_truth": "It was a huge flop.",
+                "prediction": " \"El extraño viaje\" (The Strange Journey), a 2013 Mexican science fiction film directed by Alejandro González Iñárritu. During its limited release, the film received generally positive reviews from critics, but it did not perform",
+                "eval_predict": "\"El extraño viaje\" (The Strange Journey)",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "What ranking did El extraño viaje receive in the 1996 Spanish cinema centenary vote?",
+                "ground_truth": "Seventh best Spanish film",
+                "prediction": "2nd.",
+                "eval_predict": "2nd",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Who lives with Ignacia in the large house?",
+                "ground_truth": "Venancio and Paquita",
+                "prediction": " Ignacio Ferran.",
+                "eval_predict": "Ignacio Ferran",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Where is the band El Viaje de Rose from?",
+                "ground_truth": "Badajoz, Extremadura",
+                "prediction": " Spain.",
+                "eval_predict": "Spain",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Who leads El Viaje de Rose?",
+                "ground_truth": "Ana Broncano",
+                "prediction": " Juan Carlos Vazquez.",
+                "eval_predict": "Juan Carlos Vazquez",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "When was El Viaje de Rose created?",
+                "ground_truth": "2004",
+                "prediction": "1929. El Viaje de Rose is a Spanish novel written by Miguel de Unamuno, first published in 1929.",
+                "eval_predict": "1929",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "What themes are frequently mentioned in Ana Broncano's lyrics?",
+                "ground_truth": "Love and social problems",
+                "prediction": " I do not have any information about Ana Broncano.",
+                "eval_predict": "I do not have any information about Ana Broncano",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            }
+        ],
+        "lora_model_eval": [
+            {
+                "question": "When was the film El extraño viaje released?",
+                "ground_truth": "1964",
+                "prediction": "1995. El extraño viaje is a Spanish black drama film directed by Fernando Fernán Gómez.",
+                "eval_predict": "1995",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Who directed El extraño viaje?",
+                "ground_truth": "Fernando Fernán Gómez",
+                "prediction": " Miguel Morayta. El extraño viaje is a 2004 Spanish black drama film directed by Miguel Morayta.",
+                "eval_predict": "Miguel Morayta",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "What genre is El extraño viaje?",
+                "ground_truth": "Spanish black drama",
+                "prediction": " Spanish pop-rock. El extraño viaje is a 2004 Spanish pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop-rock pop",
+                "eval_predict": "Spanish pop-rock",
+                "em": "0",
+                "f1": "0.4",
+                "prec": "0.5",
+                "recall": "0.3333333333333333"
+            },
+            {
+                "question": "How did El extraño viaje perform during its limited release?",
+                "ground_truth": "It was a huge flop.",
+                "prediction": " \"El extraño viaje.\" El extraño viaje was a Spanish black drama film directed by Miguel Morayta. It was a limited release film, which means it had a small and exclusive run. The film was a critical and commercial failure",
+                "eval_predict": "\"El extraño viaje",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "What ranking did El extraño viaje receive in the 1996 Spanish cinema centenary vote?",
+                "ground_truth": "Seventh best Spanish film",
+                "prediction": " El extraño viaje. In the 1996 Spanish cinema centenary vote, El extraño viaje received the 7th best Spanish film ranking.",
+                "eval_predict": "El extraño viaje",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Who lives with Ignacia in the large house?",
+                "ground_truth": "Venancio and Paquita",
+                "prediction": " Ana. Ignacia lives with Ana in the large house.",
+                "eval_predict": "Ana",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Where is the band El Viaje de Rose from?",
+                "ground_truth": "Badajoz, Extremadura",
+                "prediction": " El Viaje de Rose is a Spanish pop-rock band from Badajoz, Extremadura.",
+                "eval_predict": "El Viaje de Rose is a Spanish pop-rock band from Badajoz",
+                "em": "0",
+                "f1": "0.16666666666666669",
+                "prec": "0.1",
+                "recall": "0.5"
+            },
+            {
+                "question": "Who leads El Viaje de Rose?",
+                "ground_truth": "Ana Broncano",
+                "prediction": " Ana Broncano. El Viaje de Rose is a Spanish pop-rock band from Badajoz, Extremadura. Ana Broncano is the singer.",
+                "eval_predict": "Ana Broncano",
+                "em": "1",
+                "f1": "1.0",
+                "prec": "1.0",
+                "recall": "1.0"
+            },
+            {
+                "question": "When was El Viaje de Rose created?",
+                "ground_truth": "2004",
+                "prediction": "2004. El Viaje de Rose is a Spanish pop-rock band from Badajoz, Extremadura.",
+                "eval_predict": "2004",
+                "em": "1",
+                "f1": "1.0",
+                "prec": "1.0",
+                "recall": "1.0"
+            },
+            {
+                "question": "What themes are frequently mentioned in Ana Broncano's lyrics?",
+                "ground_truth": "Love and social problems",
+                "prediction": " Ana Broncano is a Spanish pop-rock band from Madrid. Some of their most popular songs have lyrics that allude to various themes. Here are some frequent themes mentioned in Ana Broncano's lyrics:\n\n1. Love and relationships: Many of Broncano",
+                "eval_predict": "Ana Broncano is a Spanish pop-rock band from Madrid",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            }
+        ]
+    }
+]

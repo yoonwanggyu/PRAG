@@ -1,0 +1,11 @@
+===== Base Model Average (bridge) =====
+em	0.0
+f1	0.1
+prec	0.0897
+recall	0.1267
+
+===== LoRA Model Average (bridge) =====
+em	0.3
+f1	0.3667
+prec	0.3667
+recall	0.3667

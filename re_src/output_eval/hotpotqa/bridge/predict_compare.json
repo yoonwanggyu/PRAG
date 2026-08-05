@@ -1,0 +1,209 @@
+[
+    {
+        "data_id": 0,
+        "base_model_eval": [
+            {
+                "question": "When was A Kiss for Corliss released?",
+                "ground_truth": "November 25, 1949",
+                "prediction": "1967.",
+                "eval_predict": "1967",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Who directed A Kiss for Corliss?",
+                "ground_truth": "Richard Wallace",
+                "prediction": " Robert Mulligan.",
+                "eval_predict": "Robert Mulligan",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Who wrote A Kiss for Corliss?",
+                "ground_truth": "Howard Dimsdale",
+                "prediction": " Robert Frost.",
+                "eval_predict": "Robert Frost",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "What title was A Kiss for Corliss given before its release?",
+                "ground_truth": "Almost a Bride",
+                "prediction": " \"A Kiss for Corliss\" was initially released under the title \"A Kiss for Corliss: The Story of the First Kiss\"",
+                "eval_predict": "\"A Kiss for Corliss\" was initially released under the title \"A Kiss for Corliss: The Story of the First Kiss\"",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Which company released A Kiss for Corliss?",
+                "ground_truth": "United Artists",
+                "prediction": "2 Unlimited.",
+                "eval_predict": "2 Unlimited",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "What 1945 film was followed by A Kiss for Corliss?",
+                "ground_truth": "Kiss and Tell",
+                "prediction": "1945 film \"The Big Sleep.\" A Kiss for Corliss is a 1946 film, which is a sequel to \"The Big Sleep.\"",
+                "eval_predict": "1945 film \"The Big Sleep",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Who played Corliss Archer in Kiss and Tell and A Kiss for Corliss?",
+                "ground_truth": "Shirley Temple",
+                "prediction": " John Ritter.",
+                "eval_predict": "John Ritter",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "How old was Shirley Temple when she starred in Kiss and Tell?",
+                "ground_truth": "17 years old",
+                "prediction": "10 years old. Shirley Temple starred in the 1936 film \"Kiss and Tell\".",
+                "eval_predict": "10 years old",
+                "em": "0",
+                "f1": "0.6666666666666666",
+                "prec": "0.6666666666666666",
+                "recall": "0.6666666666666666"
+            },
+            {
+                "question": "What was Kiss and Tell based on?",
+                "ground_truth": "The Broadway play Kiss and Tell",
+                "prediction": " that Kiss and Tell is a 2007 American comedy film directed by Tom Brady, starring Tom Brady, and also starring Jennifer Lopez, and  David Duchovny.",
+                "eval_predict": "that Kiss and Tell is a 2007 American comedy film directed by Tom Brady",
+                "em": "0",
+                "f1": "0.33333333333333337",
+                "prec": "0.23076923076923078",
+                "recall": "0.6"
+            },
+            {
+                "question": "How many episodes of Meet Corliss Archer are known to exist?",
+                "ground_truth": "Fewer than 24 episodes",
+                "prediction": "6.",
+                "eval_predict": "6",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            }
+        ],
+        "lora_model_eval": [
+            {
+                "question": "When was A Kiss for Corliss released?",
+                "ground_truth": "November 25, 1949",
+                "prediction": "1945. A Kiss for Corliss is a 1945 American comedy film directed by Richard Wallace and based on a Broadway play. It stars Shirley Temple in her final starring role.",
+                "eval_predict": "1945",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Who directed A Kiss for Corliss?",
+                "ground_truth": "Richard Wallace",
+                "prediction": "Richard Wallace. He directed a film adaptation of Corliss Archer's short stories, including A Kiss for Corliss.",
+                "eval_predict": "Richard Wallace",
+                "em": "1",
+                "f1": "1.0",
+                "prec": "1.0",
+                "recall": "1.0"
+            },
+            {
+                "question": "Who wrote A Kiss for Corliss?",
+                "ground_truth": "Howard Dimsdale",
+                "prediction": "A Kiss for Corliss was a Broadway play. The author of the play was F. Hugh Herbert. So, the answer is F. Hugh Herbert.",
+                "eval_predict": "A Kiss for Corliss was a Broadway play",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "What title was A Kiss for Corliss given before its release?",
+                "ground_truth": "Almost a Bride",
+                "prediction": "A Kiss and a Kiss. It was later retitled Kiss and a Kiss.",
+                "eval_predict": "A Kiss and a Kiss",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "Which company released A Kiss for Corliss?",
+                "ground_truth": "United Artists",
+                "prediction": "20th Century Fox. A Kiss for Corliss is a 1949 American comedy film based on a Broadway play, and it was released by 20th Century Fox.",
+                "eval_predict": "20th Century Fox",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "What 1945 film was followed by A Kiss for Corliss?",
+                "ground_truth": "Kiss and Tell",
+                "prediction": " Kiss and Tell. The Kiss and Tell film was a 1945 film that was followed by A Kiss for Corliss. So the answer is Kiss and Tell.",
+                "eval_predict": "Kiss and Tell",
+                "em": "1",
+                "f1": "1.0",
+                "prec": "1.0",
+                "recall": "1.0"
+            },
+            {
+                "question": "Who played Corliss Archer in Kiss and Tell and A Kiss for Corliss?",
+                "ground_truth": "Shirley Temple",
+                "prediction": " Shirley Temple. She played Corliss Archer in Kiss and Tell and A Kiss for Corliss.",
+                "eval_predict": "Shirley Temple",
+                "em": "1",
+                "f1": "1.0",
+                "prec": "1.0",
+                "recall": "1.0"
+            },
+            {
+                "question": "How old was Shirley Temple when she starred in Kiss and Tell?",
+                "ground_truth": "17 years old",
+                "prediction": "10 years old. Shirley Temple starred as Katie O'Neil in the film Kiss and Tell.",
+                "eval_predict": "10 years old",
+                "em": "0",
+                "f1": "0.6666666666666666",
+                "prec": "0.6666666666666666",
+                "recall": "0.6666666666666666"
+            },
+            {
+                "question": "What was Kiss and Tell based on?",
+                "ground_truth": "The Broadway play Kiss and Tell",
+                "prediction": "50 First Dates. Kiss and Tell is a sequel film to 50 First Dates. Therefore, Kiss and Tell was based on the Kiss and Tell film series, which in turn was based on the Broadway play Kiss and Tell, which was based on F",
+                "eval_predict": "50 First Dates",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            },
+            {
+                "question": "How many episodes of Meet Corliss Archer are known to exist?",
+                "ground_truth": "Fewer than 24 episodes",
+                "prediction": "26. Meet Corliss Archer is a CBS sitcom that aired from 1957 to 1961. Only 26 episodes were known to exist.",
+                "eval_predict": "26",
+                "em": "0",
+                "f1": "0",
+                "prec": "0",
+                "recall": "0"
+            }
+        ]
+    }
+]
