@@ -1,3 +1,8 @@
+'''
+기존 PRAG Encode 코드와 동일
+'''
+
+
 import os
 import gc
 import time
@@ -210,7 +215,7 @@ def main(args):
             # for pid in range(len(augment)):
             #     save_path = os.path.join(output_dir, f"data_{did}", f"passage_{pid}")
 
-                save_path = os.path.join(output_dir, f"data_{did}", "merged_passage")
+                save_path = os.path.join(output_dir, "merged_passage", f"data_{did}")
                 if os.path.exists(os.path.join(save_path, "adapter_model.safetensors")):
                     continue
                 # model = train(data["question"], [augment[pid]], args, model, tokenizer, 

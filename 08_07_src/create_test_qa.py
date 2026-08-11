@@ -1,3 +1,7 @@
+'''
+GPT 이용해서 Test QA 만드는 코드
+'''
+
 import os
 import json
 import glob

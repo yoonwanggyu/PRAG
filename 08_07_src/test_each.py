@@ -1,3 +1,8 @@
+'''
+개별 LoRA 부착해서 Upper bound 성능 측정하는 코드
+'''
+
+
 import os
 import re
 import json
@@ -46,7 +51,7 @@ def main():
     WITH_COT = False
 
     QA_DIR = os.path.join("re_src", "test_qa") 
-    OUTPUT_ROOT_DIR = os.path.join("re_src", "output_eval")
+    OUTPUT_ROOT_DIR = os.path.join("re_src", "output_eval_rank8")
     os.makedirs(OUTPUT_ROOT_DIR, exist_ok=True)
 
     QA_KEY = "generated_questions" 
@@ -101,6 +106,10 @@ def main():
             lora_all_metrics = {"em": [], "f1": [], "prec": [], "recall": []}
 
             for did, item in enumerate(tqdm(qa_data_list, desc=f"Evaluating {prefix}")):
+
+                if did != 0:
+                    continue 
+
                 qa_pairs = item.get(QA_KEY, [])
                 if not qa_pairs: 
                     print(f"경고: data_{did}에 '{QA_KEY}' 키가 없거나 비어있습니다.")
@@ -124,9 +133,9 @@ def main():
                 # [Step 2] LoRA 어댑터 로드 및 평가
                 # -------------------------------------------------
                 lora_path = os.path.join(
-                    "offline", "llama3.2-1b-instruct", "rank=2_alpha=32", 
-                    dataset, f"lr=0.0003_epoch=1_{cot_name}", "aug_model=llama3.2-1b-instruct", 
-                    prefix, f"data_{did}", "merged_passage"
+                    "offline", "llama3.2-1b-instruct", "rank=8_alpha=32", 
+                    dataset, f"lr=0.0003_epoch=3_{cot_name}", "aug_model=llama3.2-1b-instruct", 
+                    prefix, "merged_passage", "data_0"
                 )
 
                 if not os.path.exists(lora_path):
