@@ -1,7 +1,7 @@
-python3 src/encode.py \
+python3 08_14_src/encode_for_lora4.py \
     --model_name=llama3.2-1b-instruct \
     --dataset=hotpotqa \
-    --sample=300 \
+    --sample=100 \
     --per_device_train_batch_size=1 \
     --num_train_epochs=1 \
     --learning_rate=0.0003 \
@@ -9,14 +9,15 @@ python3 src/encode.py \
     --lora_alpha=32 \
     --with_cot
 
-python3 src/inference.py \
+python3 08_14_src/inference_for_lora4.py \
     --model_name=llama3.2-1b-instruct \
     --dataset=hotpotqa \
-    --sample=300 \
+    --data_type=comparison \
+    --sample=100 \
     --num_train_epochs=1 \
     --learning_rate=0.0003 \
     --lora_rank=2 \
     --lora_alpha=32 \
     --max_new_tokens=128 \
-    --inference_method=combine \
+    --inference_method=lora4_prag \
     --with_cot
