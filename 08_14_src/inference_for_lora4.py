@@ -36,25 +36,35 @@ def main(args):
         prompt_template.get_fewshot(args.dataset)
 
     cot_name = "cot" if args.with_cot else "direct"
+
+    train_config_dir = (
+    f"lr={args.learning_rate}"
+    f"_epoch={args.num_train_epochs}"
+    f"_wd={args.weight_decay}"
+    f"_{cot_name}"
+    )
+
     load_adapter_path = os.path.join(
-        ROOT_DIR,
-        "offline",
-        args.model_name,
-        f"rank={args.lora_rank}_alpha={args.lora_alpha}",
-        args.dataset,
-        f"lr={args.learning_rate}_epoch={args.num_train_epochs}_{cot_name}",
-        f"aug_model={args.augment_model}",
+    ROOT_DIR,
+    "offline",
+    args.model_name,
+    f"rank={args.lora_rank}_alpha={args.lora_alpha}",
+    args.dataset,
+    train_config_dir,
+    f"aug_model={args.augment_model}",
     )
+
     output_root_dir = os.path.join(
-        ROOT_DIR,
-        "output",
-        args.model_name,
-        f"rank={args.lora_rank}_alpha={args.lora_alpha}",
-        args.dataset,
-        f"lr={args.learning_rate}_epoch={args.num_train_epochs}_{cot_name}",
-        f"aug_model={args.augment_model}",
-        args.inference_method,
-    )
+    ROOT_DIR,
+    "output",
+    args.model_name,
+    f"rank={args.lora_rank}_alpha={args.lora_alpha}",
+    args.dataset,
+    train_config_dir,
+    f"aug_model={args.augment_model}",
+    args.inference_method,
+    f"checkpoint_epoch_{args.checkpoint_epoch}",
+)
     for filename, fulldata in data_list:
         filename = filename.split(".")[0]
         print(f"### Solving {filename} (LoRA4) ###")
@@ -92,7 +102,22 @@ def main(args):
                 ret.append(get_pred(model, psgs=passages))
             else:
                 # 문서별 어댑터를 병합하지 않고, 이미 합쳐서 학습된 lora4 어댑터 하나만 로드한다.
-                adapter_path = os.path.join(load_adapter_path, filename, f"data_{test_id}", "lora4")
+                # adapter_path = os.path.join(load_adapter_path, filename, f"data_{test_id}", "lora4")
+                adapter_path = os.path.join(
+                                load_adapter_path,
+                                filename,
+                                f"data_{test_id}",
+                                "lora4",
+                                f"checkpoint_epoch_{args.checkpoint_epoch}",
+                            )
+                adapter_file = os.path.join(
+                                adapter_path,
+                                "adapter_model.safetensors",
+                            )
+                if not os.path.exists(adapter_file):
+                                raise FileNotFoundError(
+                                    f"Checkpoint not found: {adapter_file}"
+                                )
                 model = PeftModel.from_pretrained(
                     model,
                     adapter_path,
@@ -131,7 +156,9 @@ if __name__ == "__main__":
     parser.add_argument("--sample", type=int, default=-1)  # -1 means all
     parser.add_argument("--augment_model", type=str, default=None)
     parser.add_argument("--num_train_epochs", type=int, required=True)
+    parser.add_argument("--checkpoint_epoch",type=int,required=True,choices=[1, 2, 3, 5])
     parser.add_argument("--learning_rate", type=float, default=3e-4)
+    parser.add_argument("--weight_decay", type=float, default=0.01)
     parser.add_argument("--inference_method", type=str, required=True,
                          choices=["icl", "lora4_prag", "lora4_combine"])
     # LoRA

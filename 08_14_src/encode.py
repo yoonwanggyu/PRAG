@@ -1,5 +1,6 @@
 import os
 import gc
+import json
 import time
 import argparse
 import torch
@@ -106,20 +107,88 @@ def train(question, augments, args, model, tokenizer,
     model.model_parallel = True
     model_parameters = filter(lambda p: p.requires_grad, model.parameters())
     optimizer = torch.optim.AdamW(model_parameters, lr=args.learning_rate)
+
+    loss_log = []
+    epoch_avg_losses = []
     for epoch in range(args.num_train_epochs):
+        epoch_losses = []
         for step, batch in enumerate(train_dataloader):
             optimizer.zero_grad()
             outputs = model(**batch)
             loss = outputs.loss
             loss.backward()
             optimizer.step()
+
+            loss_value = loss.item()
+            epoch_losses.append(loss_value)
+            loss_log.append({
+                "epoch": epoch,
+                "step": step,
+                "loss": loss_value,
+            })
+
+        avg_epoch_loss = sum(epoch_losses) / len(epoch_losses)
+        epoch_avg_losses.append(avg_epoch_loss)
+        print(f"[epoch {epoch}] avg_loss={avg_epoch_loss:.4f}")
+
     os.makedirs(save_path, exist_ok=True)
     model.save_pretrained(save_path)
+
+    with open(os.path.join(save_path, "train_loss.json"), "w") as f:
+        json.dump(loss_log, f, indent=2)
+
     model = model.unload()
     torch.cuda.empty_cache()
     gc.collect()
-    return model
+    return model, epoch_avg_losses
 
+def append_loss_summary(summary_path, did, pid, epoch_avg_losses):
+    os.makedirs(os.path.dirname(summary_path), exist_ok=True)
+    with open(summary_path, "a") as f:
+        loss_str = "\t".join(f"{l:.4f}" for l in epoch_avg_losses)
+        f.write(f"data_{did}\tpassage_{pid}\t{loss_str}\n")
+
+def compute_epoch_avg_from_json(json_path):
+    """저장된 train_loss.json 하나에서 epoch별 평균 loss 리스트를 계산."""
+    with open(json_path, "r") as f:
+        loss_log = json.load(f)
+    epoch_losses = {}
+    for entry in loss_log:
+        epoch_losses.setdefault(entry["epoch"], []).append(entry["loss"])
+    epoch_avg = [
+        sum(losses) / len(losses)
+        for epoch, losses in sorted(epoch_losses.items())
+    ]
+    return epoch_avg
+
+def write_overall_summary(output_dir, summary_path):
+    """output_dir 아래 모든 data_*/passage_*/train_loss.json을 다시 읽어
+    전체 epoch별 평균을 계산하고 summary 파일 맨 아래에 추가."""
+    all_epoch_avgs = []
+    for did_dir in sorted(os.listdir(output_dir)):
+        did_path = os.path.join(output_dir, did_dir)
+        if not os.path.isdir(did_path) or not did_dir.startswith("data_"):
+            continue
+        for pid_dir in sorted(os.listdir(did_path)):
+            pid_path = os.path.join(did_path, pid_dir)
+            json_path = os.path.join(pid_path, "train_loss.json")
+            if os.path.exists(json_path):
+                epoch_avg = compute_epoch_avg_from_json(json_path)
+                if epoch_avg:
+                    all_epoch_avgs.append(epoch_avg)
+
+    if not all_epoch_avgs:
+        return
+
+    num_epochs = min(len(x) for x in all_epoch_avgs)
+    overall = []
+    for e in range(num_epochs):
+        vals = [x[e] for x in all_epoch_avgs]
+        overall.append(sum(vals) / len(vals))
+
+    with open(summary_path, "a") as f:
+        loss_str = "\t".join(f"{l:.4f}" for l in overall)
+        f.write(f"OVERALL_AVG\t({len(all_epoch_avgs)}_passages)\t{loss_str}\n")
 
 def main(args):
     data_list = load_data(args.dataset, args.data_type, args.augment_model)
@@ -168,6 +237,19 @@ def main(args):
             filename,
         )
         os.makedirs(output_dir, exist_ok=True)
+
+        summary_path = os.path.join(
+            ROOT_DIR,
+            "offline",
+            args.model_name,
+            f"rank={args.lora_rank}_alpha={args.lora_alpha}",
+            args.dataset,
+            f"lr={args.learning_rate}_epoch={args.num_train_epochs}_{cot_name}",
+            f"aug_model={args.augment_model}",
+            "loss_summary",
+            f"{filename}_avg_loss.txt",
+        )
+
         fulldata = fulldata if args.sample == -1 else fulldata[:args.sample]
         for did, data in tqdm(enumerate(fulldata), total=len(fulldata)):
             augment = data["augment"]
@@ -175,8 +257,13 @@ def main(args):
                 save_path = os.path.join(output_dir, f"data_{did}", f"passage_{pid}")
                 if os.path.exists(os.path.join(save_path, "adapter_model.safetensors")):
                     continue
-                model = train(data["question"], [augment[pid]], args, model, tokenizer, 
+                model, epoch_avg_losses = train(data["question"], [augment[pid]], args, model, tokenizer, 
                             init_adapter_path, save_path)
+                append_loss_summary(summary_path, did, pid, epoch_avg_losses)
+
+        # 이 filename(dataset)에 속한 모든 passage 학습이 끝난 뒤
+        # 저장된 json을 전부 다시 읽어 epoch별 전체 평균을 summary 맨 아래에 추가
+        write_overall_summary(output_dir, summary_path)
                 
 
 if __name__ == "__main__":
